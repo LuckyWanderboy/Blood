@@ -1,7 +1,7 @@
 
 
 blood1 = read.csv("blood.csv")
-sdds
+
 
 
 as.factor(blood1$Donated)
