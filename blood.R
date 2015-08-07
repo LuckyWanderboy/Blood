@@ -1,17 +1,19 @@
-rm(list = ls())
 
-Test <- read.csv("~/R/blood/Test.csv")
-Train <- read.csv("~/R/blood/Train.csv")
+Test  <- read.csv("Test.csv")
+Train <- read.csv("Train.csv")
 
-names = names(Train)
-blah = paste(names[2],names[3],names[5], sep ="+")
+myformula <- Made.Donation.in.March.2007 ~ . ^2 
 
-myformula = paste(names[6],"~",blah)
-
-names[6]
-
-myformula
-
+  
+Train <- within(Train, {
+  
+  Total.Volume.Donated..c.c.. <- NULL
+  More.than.5year <- Months.since.First.Donation > 60
+  
+  
+})  
+  
+  
 model = glm(myformula, data=Train, family = binomial)
 
 summary(model)
