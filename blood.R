@@ -1,1 +1,1 @@
-testInheritedMethods()
+blood = read.csv("blood.csv")
