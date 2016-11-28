@@ -5,10 +5,10 @@ library(xgboost)
 
 
 #### Logistic
-traindata <- read.csv("~/Dropbox/Nexus/Selflearn/train.csv")
-traindata <- read_feather("~/Dropbox/Nexus/Selflearn/train.csv")
+traindata <- read.csv("Train.csv")
+testdata <- read.csv("Test.csv")
 
-testdata <- read.csv("~/Dropbox/Nexus/Selflearn/test.csv")
+
 setDT(traindata)
 setDT(testdata)
 
