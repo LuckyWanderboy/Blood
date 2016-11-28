@@ -1,6 +1,8 @@
 library(data.table)
 library(corrplot)
 library(party)
+library(xgboost)
+
 
 #### Logistic
 traindata <- read.csv("~/Dropbox/Nexus/Selflearn/train.csv")
